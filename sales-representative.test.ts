@@ -337,6 +337,15 @@ describe('sales representative', () => {
 		cy.wait(5000);
 	});
 
+	
+	it('BSX-TC-5566	Negative TC-To verify select time zone field without selecting country.', () => {
+		cy.get('#add-sales-representative-btn').click();
+		cy.get('#time-zone-dropdown').should("not.be.clickable");
+	});
+
+	it('Negative TC-To verify add button when user does not enter fields.',()=>{
+		
+	});
 
 
 	// it('check sorting works or not',()=>{
